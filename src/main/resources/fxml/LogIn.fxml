@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.LogInController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         <ColumnConstraints hgrow="SOMETIMES" />
@@ -21,15 +21,15 @@
         <RowConstraints vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <TextField GridPane.columnIndex="1">
+        <TextField fx:id="usernameId" GridPane.columnIndex="1">
             <GridPane.margin>
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
             </GridPane.margin>
         </TextField>
         <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
             <buttons>
-                <Button mnemonicParsing="false" text="Cancel" />
-                <Button defaultButton="true" mnemonicParsing="false" text="OK" />
+                <Button mnemonicParsing="false" onAction="#resetAciotn" text="Cancle" />
+                <Button fx:id="OkDugmeId" defaultButton="true" mnemonicParsing="false" onAction="#akcija" text="OK" />
             </buttons>
         </ButtonBar>
         <Label text="Username:">
@@ -42,7 +42,7 @@
                 <Insets left="20.0" right="20.0" />
             </GridPane.margin>
         </Label>
-        <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <PasswordField fx:id="passwordId" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <GridPane.margin>
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
             </GridPane.margin>
